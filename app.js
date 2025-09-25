@@ -24,7 +24,7 @@ app.use('/', userRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Iniciando a conexão com o banco de dados do MongoDB
-//mongoose.connect("mongodb://127.0.0.1:27017/api-filosofos")
+mongoose.connect("mongodb://127.0.0.1:27017/api-filosofos")
 
 // Rodando a API na porta 4000
 const port = 4000;
