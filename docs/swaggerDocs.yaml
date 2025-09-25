@@ -1,0 +1,36 @@
+// "./docs/swaggerDocs.yaml":
+
+paths:
+  /games:
+    get:
+      summary: Retorna a lista de todos os jogos cadastrados
+      tags: [Games]
+      security:
+        - bearerAuth: [] # Utilizando autenticação JWT
+      responses:
+        200:
+          description: Lista de jogos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    _id:
+                      type: string
+                      example: "6782b9b16d6ea34ace5bd199"
+                    title:
+                      type: string
+                      example: "CS-GO"
+                    platform:
+                      type: string
+                      example: "PC (Windows)"
+                    year:
+                      type: integer
+                      example: 2012
+                    price:
+                      type: integer
+                      example: 0
+        500:
+          description: Erro interno do servidor

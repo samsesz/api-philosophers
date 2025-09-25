@@ -1,4 +1,4 @@
-import filosofoSchemaService from "../services/filosofoSchemaService.js";
+import filosofoService from "../services/filosofoService.js";
 import { ObjectId } from "mongodb";
 
 // função para listar jogos
